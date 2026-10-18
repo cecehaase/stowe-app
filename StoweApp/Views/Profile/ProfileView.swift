@@ -7,6 +7,9 @@ struct ProfileView: View {
     @State private var editingAlert: PersonalAlert?
     @State private var showSetup = false
     @State private var confirmStartOver = false
+    @State private var confirmDeleteAccount = false
+    @State private var isDeletingAccount = false
+    @State private var accountError: String?
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some View {
@@ -29,7 +32,7 @@ struct ProfileView: View {
                 }
                 Section("Bank accounts") {
                     PlaidLinkButton(title: store.isBankLinked ? "Connect another account" : "Connect bank account")
-                    if store.isBankLinked {
+                    if store.isBankLinked && store.isSignedIn {
                         Button { Task { await store.syncTransactions() } } label: {
                             Label("Sync now", systemImage: "arrow.triangle.2.circlepath")
                         }
@@ -40,6 +43,25 @@ struct ProfileView: View {
                     }
                     if let error = store.syncError {
                         Text(error).font(.caption).foregroundStyle(.red)
+                    }
+                }
+                if store.isSignedIn {
+                    Section {
+                        Button(role: .destructive) { confirmDeleteAccount = true } label: {
+                            HStack {
+                                Text("Delete account")
+                                Spacer()
+                                if isDeletingAccount { ProgressView() }
+                            }
+                        }
+                        .disabled(isDeletingAccount)
+                        if let accountError {
+                            Text(accountError).font(.caption).foregroundStyle(.red)
+                        }
+                    } header: {
+                        Text("Account")
+                    } footer: {
+                        Text("Signed in with Apple. Deleting your account disconnects your banks and removes your data from Stowe's server.")
                     }
                 }
                 Section("Permissions") {
@@ -88,6 +110,25 @@ struct ProfileView: View {
             } message: {
                 Text("This clears your income and budget setup and shows the welcome screens again.")
             }
+            .confirmationDialog("Delete your account?", isPresented: $confirmDeleteAccount, titleVisibility: .visible) {
+                Button("Delete account", role: .destructive) { Task { await deleteAccount() } }
+            } message: {
+                Text("Stowe will disconnect every linked bank and delete your account and synced transactions. This can't be undone.")
+            }
+        }
+    }
+
+    private func deleteAccount() async {
+        isDeletingAccount = true
+        accountError = nil
+        defer { isDeletingAccount = false }
+        do {
+            try await store.deleteAccount()
+            // Back to a fresh install: welcome screens with no saved setup.
+            store.resetOnboarding()
+            hasCompletedOnboarding = false
+        } catch {
+            accountError = store.noteAPIError(error)
         }
     }
 

@@ -17,6 +17,8 @@ final class BudgetStore {
     /// Learned corrections: merchant key → category ID. See `MerchantRule`.
     private(set) var merchantRules: [String: UUID] = [:]
     private(set) var isBankLinked = false
+    /// Whether a Sign in with Apple session is saved. Bank features need one.
+    private(set) var isSignedIn = SessionKeychain.token != nil
     private(set) var isSyncing = false
     private(set) var lastSyncDate: Date?
     var syncError: String?
@@ -249,6 +251,43 @@ final class BudgetStore {
         }
     }
 
+    // MARK: Account
+
+    /// Exchanges a Sign in with Apple identity token for a server session.
+    func signIn(identityToken: String, nonce: String) async throws {
+        try await api.signIn(identityToken: identityToken, nonce: nonce)
+        isSignedIn = true
+    }
+
+    /// Deletes the server account (which disconnects every bank at Plaid), then clears the
+    /// bank data stored on this device. Throws if the server couldn't delete the account.
+    func deleteAccount() async throws {
+        try await api.deleteAccount()
+        isSignedIn = false
+        clearBankData()
+    }
+
+    /// Records an API failure; a rejected or missing session flips the app back to signed out.
+    func noteAPIError(_ error: Error) -> String {
+        if case PlaidAPIClient.APIError.signedOut = error { isSignedIn = false }
+        return error.localizedDescription
+    }
+
+    private func clearBankData() {
+        isBankLinked = false
+        lastSyncDate = nil
+        historyStatus = nil
+        syncError = nil
+        transactionCache = [:]
+        merchantRules = [:]
+        expenses.removeAll { $0.plaidTransactionID != nil }
+        try? FileManager.default.removeItem(at: Self.transactionCacheURL)
+        for key in [Self.linkedKey, Self.lastSyncKey, Self.expensesKey, Self.rulesKey] {
+            UserDefaults.standard.removeObject(forKey: key)
+        }
+        dataVersion += 1
+    }
+
     // MARK: Plaid
 
     /// Called from Link's onSuccess: trade the public token server-side, then pull transactions.
@@ -271,7 +310,7 @@ final class BudgetStore {
                 if received > 0 || syncError != nil { break }
             }
         } catch {
-            syncError = error.localizedDescription
+            syncError = noteAPIError(error)
         }
     }
 
@@ -279,7 +318,7 @@ final class BudgetStore {
     /// Returns how many added/modified transactions the server sent.
     @discardableResult
     func syncTransactions() async -> Int {
-        guard isBankLinked, !isSyncing else { return 0 }
+        guard isBankLinked, isSignedIn, !isSyncing else { return 0 }
         isSyncing = true
         syncError = nil
         defer { isSyncing = false }
@@ -302,7 +341,7 @@ final class BudgetStore {
             saveExpenses()
             return response.added.count + response.modified.count
         } catch {
-            syncError = error.localizedDescription
+            syncError = noteAPIError(error)
             return 0
         }
     }
