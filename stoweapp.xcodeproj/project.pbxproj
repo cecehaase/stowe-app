@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CAC68DA3083D7A700FBD46E /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAC68D93083D7A700FBD46E /* LinkKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CAC691C30841D6000FBD46E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CAC68883083D02900FBD46E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CAC688F3083D02900FBD46E;
+			remoteInfo = budgetingapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6CAC68903083D02900FBD46E /* stoweapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stoweapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAC690330840CC100FBD46E /* stoweappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stoweappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAC691830841D5F00FBD46E /* stoweappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stoweappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6CAC68F83083E51F00FBD46E /* Exceptions for "StoweApp" folder in "stoweapp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6CAC688F3083D02900FBD46E /* stoweapp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6CAC68923083D02900FBD46E /* StoweApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6CAC68F83083E51F00FBD46E /* Exceptions for "StoweApp" folder in "stoweapp" target */,
+			);
+			path = StoweApp;
+			sourceTree = "<group>";
+		};
+		6CAC690430840CC100FBD46E /* stoweappTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = stoweappTests;
+			sourceTree = "<group>";
+		};
+		6CAC691930841D5F00FBD46E /* stoweappUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = stoweappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CAC688D3083D02900FBD46E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				6CAC68DA3083D7A700FBD46E /* LinkKit in Frameworks */,
+			);
+		};
+		6CAC690030840CC100FBD46E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		6CAC691530841D5F00FBD46E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CAC68873083D02900FBD46E = {
+			isa = PBXGroup;
+			children = (
+				6CAC68923083D02900FBD46E /* StoweApp */,
+				6CAC690430840CC100FBD46E /* stoweappTests */,
+				6CAC691930841D5F00FBD46E /* stoweappUITests */,
+				6CAC68913083D02900FBD46E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CAC68913083D02900FBD46E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CAC68903083D02900FBD46E /* stoweapp.app */,
+				6CAC690330840CC100FBD46E /* stoweappTests.xctest */,
+				6CAC691830841D5F00FBD46E /* stoweappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CAC688F3083D02900FBD46E /* stoweapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAC689B3083D02B00FBD46E /* Build configuration list for PBXNativeTarget "stoweapp" */;
+			buildPhases = (
+				6CAC688C3083D02900FBD46E /* Sources */,
+				6CAC688D3083D02900FBD46E /* Frameworks */,
+				6CAC688E3083D02900FBD46E /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				6CAC68923083D02900FBD46E /* StoweApp */,
+			);
+			name = stoweapp;
+			packageProductDependencies = (
+				6CAC68D93083D7A700FBD46E /* LinkKit */,
+			);
+			productName = budgetingapp;
+			productReference = 6CAC68903083D02900FBD46E /* stoweapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CAC690230840CC100FBD46E /* stoweappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAC690730840CC100FBD46E /* Build configuration list for PBXNativeTarget "stoweappTests" */;
+			buildPhases = (
+				6CAC68FF30840CC100FBD46E /* Sources */,
+				6CAC690030840CC100FBD46E /* Frameworks */,
+				6CAC690130840CC100FBD46E /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				6CAC690430840CC100FBD46E /* stoweappTests */,
+			);
+			name = stoweappTests;
+			productName = budgetingappTests;
+			productReference = 6CAC690330840CC100FBD46E /* stoweappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CAC691730841D5F00FBD46E /* stoweappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAC691E30841D6000FBD46E /* Build configuration list for PBXNativeTarget "stoweappUITests" */;
+			buildPhases = (
+				6CAC691430841D5F00FBD46E /* Sources */,
+				6CAC691530841D5F00FBD46E /* Frameworks */,
+				6CAC691630841D5F00FBD46E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CAC691D30841D6000FBD46E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6CAC691930841D5F00FBD46E /* stoweappUITests */,
+			);
+			name = stoweappUITests;
+			productName = budgetingappUITests;
+			productReference = 6CAC691830841D5F00FBD46E /* stoweappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CAC68883083D02900FBD46E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2710;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					6CAC688F3083D02900FBD46E = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					6CAC690230840CC100FBD46E = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					6CAC691730841D5F00FBD46E = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = 6CAC688F3083D02900FBD46E;
+					};
+				};
+			};
+			buildConfigurationList = 6CAC688B3083D02900FBD46E /* Build configuration list for PBXProject "stoweapp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CAC68873083D02900FBD46E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6CAC68D83083D7A700FBD46E /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6CAC68913083D02900FBD46E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CAC688F3083D02900FBD46E /* stoweapp */,
+				6CAC690230840CC100FBD46E /* stoweappTests */,
+				6CAC691730841D5F00FBD46E /* stoweappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CAC688E3083D02900FBD46E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		6CAC690130840CC100FBD46E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		6CAC691630841D5F00FBD46E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CAC688C3083D02900FBD46E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		6CAC68FF30840CC100FBD46E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		6CAC691430841D5F00FBD46E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CAC691D30841D6000FBD46E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CAC688F3083D02900FBD46E /* stoweapp */;
+			targetProxy = 6CAC691C30841D6000FBD46E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6CAC68993083D02B00FBD46E /* Debug configuration for PBXProject "stoweapp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CAC689A3083D02B00FBD46E /* Release configuration for PBXProject "stoweapp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CAC689C3083D02B00FBD46E /* Debug configuration for PBXNativeTarget "stoweapp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoweApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stowe;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Stowe uses Face ID to keep your financial data private.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stowe uses your location to remind you about your budget when you arrive at or leave places you choose.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stowe uses your location to set up place-based budget reminders.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = budgetingapp.budgetingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CAC689D3083D02B00FBD46E /* Release configuration for PBXNativeTarget "stoweapp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoweApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stowe;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Stowe uses Face ID to keep your financial data private.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stowe uses your location to remind you about your budget when you arrive at or leave places you choose.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stowe uses your location to set up place-based budget reminders.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = budgetingapp.budgetingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CAC690830840CC100FBD46E /* Debug configuration for PBXNativeTarget "stoweappTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.budgetingappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/budgetingapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/budgetingapp";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		6CAC690930840CC100FBD46E /* Release configuration for PBXNativeTarget "stoweappTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.budgetingappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/budgetingapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/budgetingapp";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		6CAC691F30841D6000FBD46E /* Debug configuration for PBXNativeTarget "stoweappUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = budgetingapp.budgetingappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = budgetingapp;
+			};
+			name = Debug;
+		};
+		6CAC692030841D6000FBD46E /* Release configuration for PBXNativeTarget "stoweappUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQ4KRJY66Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = budgetingapp.budgetingappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = budgetingapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CAC688B3083D02900FBD46E /* Build configuration list for PBXProject "stoweapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAC68993083D02B00FBD46E /* Debug configuration for PBXProject "stoweapp" */,
+				6CAC689A3083D02B00FBD46E /* Release configuration for PBXProject "stoweapp" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		6CAC689B3083D02B00FBD46E /* Build configuration list for PBXNativeTarget "stoweapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAC689C3083D02B00FBD46E /* Debug configuration for PBXNativeTarget "stoweapp" */,
+				6CAC689D3083D02B00FBD46E /* Release configuration for PBXNativeTarget "stoweapp" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		6CAC690730840CC100FBD46E /* Build configuration list for PBXNativeTarget "stoweappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAC690830840CC100FBD46E /* Debug configuration for PBXNativeTarget "stoweappTests" */,
+				6CAC690930840CC100FBD46E /* Release configuration for PBXNativeTarget "stoweappTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		6CAC691E30841D6000FBD46E /* Build configuration list for PBXNativeTarget "stoweappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAC691F30841D6000FBD46E /* Debug configuration for PBXNativeTarget "stoweappUITests" */,
+				6CAC692030841D6000FBD46E /* Release configuration for PBXNativeTarget "stoweappUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6CAC68D83083D7A700FBD46E /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plaid/plaid-link-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6CAC68D93083D7A700FBD46E /* LinkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CAC68D83083D7A700FBD46E /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
+			productName = LinkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6CAC68883083D02900FBD46E /* Project object */;
+	validationLevel = 1;
+}
